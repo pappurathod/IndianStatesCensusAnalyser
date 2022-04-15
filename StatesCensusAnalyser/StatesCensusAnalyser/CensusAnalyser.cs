@@ -36,7 +36,7 @@ namespace StatesCensusAnalyser
                 }
                 string[] column = row.Split(',');
                 if (csvFilePath.Contains("StateCode"))
-                    datamap.Add(column[0], new CensusDataRow(column[0], column[1], column[2], column[3]));
+                    datamap.Add(column[0], new CensusDataRow(new CensusDataRowStateCode(column[0], column[1], column[2], column[3])));
                 else
                     datamap.Add(column[0], new CensusDataRow(column[0], column[1], column[2], column[3]));
             }
